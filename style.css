@@ -1,0 +1,1002 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cairo:wght@300;400;700;800&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Start Global Styling  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --mainmargin: 160px;
+}
+
+body {
+    font-family: Raleway;
+}
+
+p{
+    color: hsl(0, 0%, 88%);
+}
+
+h1 {
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+/* End Global Styling  */
+
+/* Start Landing  */
+.landing {
+    position: relative;
+    background-color: hsl(217, 28%, 15%);
+    height: 100vh;
+}
+
+.landing .hidden-menu {
+    position: absolute;
+    left: -2000px;
+    width: 50vh;
+    height: 100%;
+    background-color: hsl(219, 30%, 18%);
+    z-index: 1000;
+    transition: left .3s ease;
+}
+
+.toggle {
+    left: 0 !important;
+}
+
+.landing .hidden-menu ul li a{
+    display: block;
+    margin: 50px;
+    font-size: 47px;
+}
+
+.landing .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Start Hidden Button */
+.landing .container nav .menu {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.landing .container nav .menu span:first-child {
+    position: absolute;
+    width: 100%;
+    height: 3px;  
+    top: 0;  
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.toggle-first {
+    top: 7px !important;
+    transform: rotate(45deg);
+}
+
+.landing .container nav .menu span:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 7px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.toggle-second {
+    display: none !important;
+}
+
+.landing .container nav .menu span:last-child {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.toggle-last {
+    top: 7px !important;
+    transform: rotate(-45deg);
+}
+ /* End Hidden Button */
+
+.landing .container nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+}
+
+.landing .container nav li a,
+.landing .hidden-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color .3s ease;
+}
+
+.landing .container nav li a:hover,
+.landing .hidden-menu ul li a:hover {
+    color: hsl(198, 60%, 50%);
+}
+
+.landing .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing .middle img {
+    width: 43%;
+    z-index: 25;
+}
+
+.landing .middle h1 {
+    width: 36%;
+    font-size: 26px;
+    margin: 15px 0;
+    z-index: 25;
+}
+
+.landing .middle p {
+    width: 33%;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    z-index: 25;
+}
+
+.landing .middle button {
+    color: #fff;
+    border: 2px solid hsl(198, 60%, 50%);
+    border-radius: 21px;
+    font-size: 19px;
+    padding: 14px 44px;
+    background-color: hsl(198, 60%, 50%);
+    cursor: pointer;
+    margin-bottom: 15px;
+    z-index: 25;
+    transition: background-color .3s ease;
+}
+
+.landing .middle button:hover {
+    background-color: transparent;
+}
+/* End Landing  */
+
+/* Start Accessing  */
+.access {
+    position: relative;
+    background-color: hsl(218, 28%, 13%);
+}
+
+.access #curved-img {
+    position: absolute;
+    top: -275px;
+}
+
+.access > .container {
+    padding-top: var(--mainmargin);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access .container .info {
+    display: grid;
+    grid-template-columns: repeat(2, 495px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 51px;
+    align-items: center;
+    align-content: center;
+    z-index: 25;
+}
+.access .container .info .box {
+    text-align: center;
+    width: 90%;
+}
+
+.access .container .info .box h1{
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.access .productive .container {
+    margin-top: var(--mainmargin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 130px;
+}
+
+.access .productive .container .about {
+    margin-left: 61px;
+}
+
+.access .productive .container .about h1 {
+    width: 50%;
+    font-size: 29px;
+}
+
+.access .productive .container .about p {
+    margin: 15px 0;
+    width: 78%;
+}
+
+.access .productive .container .about .link {
+    display: flex;
+    align-items: center;
+}
+.access .productive .container .about .link a {
+    margin-right: 8px;
+    text-decoration: underline;
+    color:  hsl(176, 68%, 64%);
+}
+
+.access .productive .container .about .link img {
+    cursor: pointer;
+}
+
+.access .profiles .container {
+    position: relative;
+    margin-top: var(--mainmargin);
+    padding-bottom: 300px;
+    gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.access .profiles .container #quotes {
+    position: absolute;
+    left: -8px;
+}
+
+.access .profiles .container .card {
+    background-color: hsl(217, 28%, 15%);
+    padding: 35px;
+    z-index: 25;
+    transition: transform .3s ease;
+}
+
+.access .profiles .container .card:hover {
+    transform: scale(1.08);
+}
+
+.access .profiles .container .card > p {
+    font-size: 16px;
+}
+
+.access .profiles .container .about img {
+    border-radius: 50%;
+    width: 47px;
+}
+
+.access .profiles .container .about {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.access .profiles .container .about .inf {
+    margin-left: 10px;
+}
+
+.access .profiles .container .about .inf h3 {
+    font-size: 14px;
+    color: #fff;
+}
+
+.access .profiles .container .about .inf p {
+    font-size: 12px;
+}
+
+
+.access .contact {
+    position: absolute;
+    bottom: -113px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access .contact .contact-info {
+    width: 46%;
+    background-color: hsl(219, 30%, 18%);
+    text-align: center;
+    padding: 45px;
+    border-radius: 9px;
+} 
+
+.access .contact .contact-info p {
+    margin: 20px 0;
+}
+
+.access .contact .contact-info form {
+    display: flex;
+    align-items: center;
+}
+
+.access .contact .contact-info form input {
+    margin-right: 16px;
+    width: 63%;
+    height: 40px;
+    border-radius: 34px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.access .contact .contact-info form input::placeholder {
+    color: hsl(198, 60%, 50%);;
+    transition: opacity .3s ease;
+}
+
+.access .contact .contact-info form input:focus::placeholder{
+    opacity: 0;
+}
+
+.access .contact .contact-info form button {
+    border-radius: 34px;
+    color: #fff;
+    background-color: hsl(198, 60%, 50%);
+    border: 2px solid hsl(198, 60%, 50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    font-size: 16px;
+}
+
+.access .contact .contact-info form button:hover {
+    background-color: transparent;
+}
+/* End Accessing  */
+
+/* Start Footer  */
+footer {
+    background-color: hsl(216, 53%, 9%);
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .informations {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "loca loca loca loca cont cont cont lis1 lis1 lis2 lis2 li li li";
+    gap: 15px;
+}
+
+footer .container .informations .location,
+footer .container .informations .contacts .phone,
+footer .container .informations .contacts .email {
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .container .informations .location {
+    grid-area: loca;
+}
+
+footer .container .informations .contacts {
+    grid-area: cont;
+}
+
+footer .container .informations .list1 {
+    grid-area: lis1;
+}
+
+footer .container .informations .list2 {
+    grid-area: lis2;
+}
+
+footer .container .informations .social {
+    grid-area: li;
+}
+
+footer .container .informations .location p,
+footer .container .informations .contacts .phone p,
+footer .container .informations .contacts .email p {
+    margin-left: 8px;
+    margin-bottom: 16px;
+}   
+
+footer .container .informations .list1 li,
+footer .container .informations .list2 li {
+    list-style: none;
+    color: #fff;
+    transition: color .3s ease;
+    cursor: pointer;
+    margin-bottom: 9px;
+}
+
+footer .container .informations .social {
+    color: #fff;
+    cursor: pointer;
+}
+
+footer .container .informations .social i {
+    margin-left: 9px;
+    cursor: pointer;
+    transition: color .3s ease;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+footer .container .informations .social i:hover,
+footer .container .informations .list1 li:hover,
+footer .container .informations .list2 li:hover {
+    color: hsl(198, 60%, 50%);
+}
+/* End Footer  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start Media Queries  */
+@media (min-width: 320px) and (max-width: 414px) {
+    .landing .container nav {
+        align-items: flex-start;
+    }
+
+    .landing .middle img {
+        width: 81%;
+    }
+
+    .landing .container nav > img {
+        width: 110px;
+    }
+
+    
+    .landing .container nav ul {
+        display: none;
+    }
+
+    .landing .container nav .menu {
+        display: block;
+    }
+
+    .access #curved-img {
+        display: none;
+    }
+
+    .access .container .info .box,
+    .access .productive .container .about h1,
+    .access .productive .container .about p {
+        width: 100%;
+    }
+
+    .access .productive .container {
+        gap: 40px;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .access > .container {
+        padding: 0;
+    }
+
+    .access .productive .container .about {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .access .productive .container .about .link {
+        justify-content: center;
+    }
+
+    .access .contact .contact-info {
+        width: 100%;
+        padding: 31px;
+    }
+
+    .access .container .info .box h1 {
+        font-size: 20px;
+    }
+
+    .access .container .info .box p {
+        font-size: 15px;
+    }
+
+    .access .container .info {
+        grid-template-columns: 304px;
+        grid-template-rows: repeat(4, 250px);
+    }
+
+    .access .profiles .container {
+        grid-template-columns: 295px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .contact .contact-info form input {
+        font-size: 10px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .access .contact .contact-info form {
+        flex-direction: column;
+    }
+
+    .access .profiles .container #quotes {
+        left: -15px;
+        top: -9px;
+    }
+
+    .access .productive .container > img{
+        width: 283px;
+        margin: 5px auto;
+    }
+
+    .landing .middle p {
+        width: 86%;
+    }
+
+    .landing .middle h1 {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    footer .container {  
+        padding-top: 87px;
+    }
+
+    footer .container .informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .contact .contact-info form button {
+        font-size: 11px;
+    }
+
+
+    footer .container .informations .list1 ul , 
+    footer .container .informations .list2 ul  {
+        display: flex;
+    }
+
+    footer .container .informations .location p, 
+    footer .container .informations .contacts .phone p, 
+    footer .container .informations .contacts .email p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 715px) {
+    .landing .container nav {
+        align-items: flex-start;
+    }
+
+    .landing .middle img {
+        width: 90%;
+    }
+
+    .landing .container nav > img {
+        width: 110px;
+    }
+
+    
+    .landing .container nav ul {
+        display: none;
+    }
+
+    .landing .container nav .menu {
+        display: block;
+    }
+
+    .access #curved-img {
+        display: none;
+    }
+
+    .access .container .info .box,
+    .access .productive .container .about h1,
+    .access .productive .container .about p {
+        width: 100%;
+    }
+
+    .access .productive .container {
+        gap: 40px;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .access > .container {
+        padding: 0;
+    }
+
+    .access .productive .container .about {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .access .productive .container .about .link {
+        justify-content: center;
+    }
+
+    .access .contact .contact-info {
+        width: 100%;
+        padding: 31px;
+    }
+
+    .access .container .info .box h1 {
+        font-size: 20px;
+    }
+
+    .access .container .info .box p {
+        font-size: 15px;
+    }
+
+    .access .container .info {
+        grid-template-columns: 380px;
+        grid-template-rows: repeat(4, 250px);
+    }
+
+    .access .profiles .container {
+        grid-template-columns: 390px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .profiles .container #quotes {
+        left: -15px;
+        top: -9px;
+    }
+
+    .access .productive .container > img{
+        width: 360px;
+        margin: 5px auto;
+    }
+
+    .landing .middle p {
+        width: 86%;
+    }
+
+    .landing .middle h1 {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    footer .container {  
+        padding-top: 87px;
+    }
+
+    footer .container .informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .contact .contact-info form button {
+        font-size: 11px;
+    }
+
+
+    footer .container .informations .list1 ul , 
+    footer .container .informations .list2 ul  {
+        display: flex;
+    }
+
+    footer .container .informations .location p, 
+    footer .container .informations .contacts .phone p, 
+    footer .container .informations .contacts .email p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 527px) and (max-width: 715px) {
+    .landing .container nav {
+        align-items: flex-start;
+    }
+
+    .landing .middle img {
+        width: 78%;
+    }
+
+    .landing .container nav > img {
+        width: 110px;
+    }
+
+    
+    .landing .container nav ul {
+        display: none;
+    }
+
+    .landing .container nav .menu {
+        display: block;
+    }
+
+    .access #curved-img {
+        display: none;
+    }
+
+    .access .container .info .box {
+        width: 100%;
+    }
+
+    .access .productive .container {
+        gap: 40px;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .access .productive .container .about {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .access .productive .container .about h1,
+    .access .productive .container .about p {
+        width: 90%;
+    }
+
+    .access .productive .container .about .link {
+        justify-content: center;
+    }
+
+    .access .contact .contact-info {
+        width: 100%;
+        padding: 31px;
+    }
+
+    .access .container .info .box h1 {
+        font-size: 20px;
+    }
+
+    .access .container .info .box p {
+        font-size: 15px;
+    }
+
+    .access .container .info {
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(4, 250px);
+    }
+
+    .access .profiles .container {
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .profiles .container #quotes {
+        left: 148px;
+        top: 0;
+    }
+
+    .access .productive .container > img{
+        width: 466px;
+        margin: 5px auto;
+    }
+
+    .landing .middle p {
+        width: 80%;
+    }
+
+    .landing .middle h1 {
+        width: 84%;
+        margin-top: 50px;
+    }
+
+    footer .container {  
+        padding-top: 87px;
+    }
+
+    footer .container .informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .contact .contact-info form button {
+        font-size: 11px;
+    }
+
+
+    footer .container .informations .list1 ul , 
+    footer .container .informations .list2 ul  {
+        display: flex;
+    }
+
+    footer .container .informations .location p, 
+    footer .container .informations .contacts .phone p, 
+    footer .container .informations .contacts .email p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 715px) and (max-width: 1010px) {
+    .access #curved-img {
+        display: none;
+    }
+
+    .landing .middle img {
+        width: 59%;
+    }
+
+    .access .productive .container {
+        gap: 40px;
+        grid-template-columns: 600px;
+        justify-content: center;
+    }
+
+    .access .productive .container .about {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .access .productive .container .about h1,
+    .access .productive .container .about p {
+        width: 100%;
+    }
+
+    .access .productive .container .about .link {
+        justify-content: center;
+    }
+
+    .access .contact .contact-info {
+        width: 89%;
+    }
+
+    .access .container .info .box h1 {
+        font-size: 20px;
+    }
+
+    .access .container .info .box p {
+        font-size: 15px;
+    }
+
+    .access .container .info {
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(4, 250px);
+    }
+
+    .access .profiles .container {
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .access .profiles .container #quotes {
+        left: 148px;
+        top: 0;
+    }
+
+    .landing .middle p {
+        width: 56%;
+    }
+
+    .landing .middle h1 {
+        width: 84%;
+        margin-top: 50px;
+    }
+
+    footer .container { 
+        padding-top: 87px;
+    }
+
+    footer .container .informations {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "loca cont" "lis1 lis2" "li li"; 
+        gap: 25px 210px;
+    }
+
+    footer .container .informations .social {
+        text-align: center;
+    }
+
+    footer .container .informations .list1 ul , 
+    footer .container .informations .list2 ul  {
+        display: flex;
+    }
+
+    footer .container .informations .list1 ul li {
+        margin-left: 20px;
+    }
+ 
+    footer .container .informations .list2 ul li {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1010px) and (max-width: 1300px) {
+    .access #curved-img {
+        display: none;
+    }
+
+    .landing .middle img {
+        width: 48%;
+    }
+
+    .landing .middle h1 {
+        width: 58%;
+    }
+
+    .landing .middle p {
+        width: 51%;
+    }
+
+    .access .productive .container {
+        gap: 40px;
+        grid-template-columns: 600px;
+        justify-content: center;
+    }
+
+    .access .productive .container .about {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .access .productive .container .about h1,
+    .access .productive .container .about p {
+        width: 100%;
+    }
+
+    .access .productive .container .about .link {
+        justify-content: center;
+    }
+
+    .access .contact .contact-info {
+        width: 70%;
+    }
+
+    .access .container .info .box h1 {
+        font-size: 20px;
+    }
+
+    .access .container .info .box p {
+        font-size: 15px;
+    }
+
+    .access .container .info {
+        gap: 0;
+    }
+
+    .access .contact {
+        bottom: -74px;
+    }
+}
+/* End Media Queries  */
